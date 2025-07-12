@@ -13,6 +13,29 @@
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: #F5E1C8;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Fondo animado con corazones y estrellas */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMjAnIGhlaWdodD0nMTIwJyB2aWV3Qm94PScwIDAgMTIwIDEyMCc+CiAgPGcgZmlsbD0nI2Q5Yjc5ZSc+CiAgICA8cGF0aCBkPSdNMjAgMzAgQzIwIDIwIDQwIDIwIDQwIDM1IEM0MCAyMCA2MCAyMCA2MCAzNSBDNjAgNTAgNDAgNzAgNDAgNzAgQzQwIDcwIDIwIDUwIDIwIDMwWicvPgogICAgPHBhdGggZD0nTTcwIDYwIEM3MCA1MCA5MCA1MCA5MCA2NSBDOTAgNTAgMTEwIDUwIDExMCA2NSBDMTEwIDgwIDkwIDEwMCA5MCAxMDAgQzkwIDEwMCA3MCA4MCA3MCA2MFonLz4KICAgIDxwb2x5Z29uIHBvaW50cz0nNjAsMjAgNjUsMzIgNzgsMzIgNjgsNDAgNzIsNTIgNjAsNDUgNDgsNTIgNTIsNDAgNDIsMzIgNTUsMzInLz4KICAgIDxwb2x5Z29uIHBvaW50cz0nMzAsOTAgMzMsOTUgNDAsOTUgMzUsMTAwIDM3LDEwNyAzMCwxMDMgMjMsMTA3IDI1LDEwMCAyMCw5NSAyNyw5NScvPgogIDwvZz4KPC9zdmc+Cg==');
+      background-repeat: repeat;
+      background-size: 150px 150px;
+      animation: moverFondo 30s linear infinite;
+      opacity: 0.3;
+      z-index: -1;
+    }
+
+    @keyframes moverFondo {
+      from { transform: translate3d(0,0,0); }
+      to { transform: translate3d(-50%, -50%, 0); }
     }
 
 
@@ -36,8 +59,8 @@
 
     /* Imagen de perfil optimizada */
     .profile-pic {
-      width: 160px;
-      height: 160px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
       border: 0.5px solid #5B4431;
